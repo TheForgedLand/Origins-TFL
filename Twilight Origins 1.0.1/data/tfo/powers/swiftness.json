@@ -1,0 +1,29 @@
+{
+    "name": "Serpentine Movement",
+    "description": "Your modified body grants you extra swiftness, increased in the brisk of danger",
+    "type": "origins:multiple",
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.05
+        },
+        "update_health": false
+    },
+    "swiftness": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<=",
+            "compare_to": 12
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.05
+        },
+        "tick_rate": 10,
+        "update_health": false
+    }
+}

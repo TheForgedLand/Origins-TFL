@@ -1,0 +1,23 @@
+{
+    "name": "Flammable",
+    "description": "Your fur makes your body extremely flammable, making fire deal double damage and only dissipating it when in contact with water",
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:on_fire"
+        },
+        "type": "origins:burn",
+        "interval": 20,
+        "burn_duration": 3
+    },
+    "l1": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

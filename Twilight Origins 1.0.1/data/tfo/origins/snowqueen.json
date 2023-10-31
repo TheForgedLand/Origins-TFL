@@ -1,0 +1,16 @@
+{
+    "name": "Snow Mage",
+    "description": "Disciple of the Snow Queen, you are an adept in the magical winter arts",
+    "powers": [
+        "tfo:auroraveil",
+        "tfo:frozenheart",
+        "tfo:coldaura",
+        "tfo:hail",
+        "tfo:icebeam",
+        "tfo:icebridge"
+    ],
+    "icon": {
+        "item": "twilightforest:ice_bomb"
+    },
+    "impact": 3
+}

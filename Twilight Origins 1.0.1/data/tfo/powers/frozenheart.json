@@ -1,0 +1,20 @@
+{
+    "name": "Frozen Heart",
+    "description": "Your icy body drastically decreases your vitality",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -10
+        },
+        "update_health": true
+    },
+    "l1": {
+        "type": "origins:particle",
+        "particle": "minecraft:sneeze",
+        "frequency": 4,
+        "visible_in_first_person": true
+    }
+}

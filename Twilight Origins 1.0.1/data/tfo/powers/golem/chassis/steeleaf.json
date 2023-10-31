@@ -1,0 +1,42 @@
+{
+    "name": "Steeleaf",
+    "description": "Steeleaf protection, regeneration",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:steeleaf_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 20
+        },
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:steeleaf_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:regeneration",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    }
+}

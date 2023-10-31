@@ -1,0 +1,37 @@
+{
+    "name": "Tantrum",
+    "description": "After taking damage you release tears to damage your enemies",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:attacker_action_when_hit",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 3,
+            "source": {
+                "name": "thorns"
+            }
+        },
+        "cooldown": 50
+    },
+    "l1": {
+        "type": "origins:self_action_when_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:rain",
+                    "count": 5,
+                    "offset_y": 1.7
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.ghast.hurt",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 50
+    }
+}

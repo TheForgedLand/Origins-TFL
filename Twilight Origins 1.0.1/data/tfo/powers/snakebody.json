@@ -1,0 +1,71 @@
+{
+    "name": "Snakelike Body",
+    "description": "The forbidden nature magic has corrupted your body, your lower body is permanently protected by a thick layer of scales, impossibilitating you from wearing leggings, boots and armor heavier than chainmail",
+    "type": "origins:multiple",
+    "restrict": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:armor_value",
+                    "comparison": "<=",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "twilightforest:steeleaf_helmet"
+                    }
+                }
+            ]
+        },
+        "chest": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:armor_value",
+                    "comparison": "<=",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "twilightforest:steeleaf_chestplate"
+                    }
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "twilightforest:naga_chestplate"
+                    }
+                }
+            ]
+        },
+        "legs": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "twilightforest:naga_leggings"
+            }
+        }
+    },
+    "naturalarmor": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 4
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.max_health",
+                "operation": "addition",
+                "value": -4
+            }
+        ],
+        "update_health": true
+    }
+}

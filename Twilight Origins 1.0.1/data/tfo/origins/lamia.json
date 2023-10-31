@@ -1,0 +1,16 @@
+{
+    "name": "Lamia",
+    "description": "You were a former protector of the forest, now you have broken your vow and started practicing the forbidden magics to whorship the giant snake trapped in the courtyard",
+    "powers": [
+        "tfo:snakebody",
+        "tfo:swiftness",
+        "tfo:autoimmunity",
+        "tfo:shedscale",
+        "tfo:poison",
+        "tfo:venom"
+    ],
+    "icon": {
+        "item": "twilightforest:naga_scale"
+    },
+    "impact": 2
+}

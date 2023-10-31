@@ -1,0 +1,91 @@
+{
+    "name": "Pick and Throw",
+    "description": "You can pick up entities by crouching and right clicking them and throw them by the same way",
+    "type": "origins:multiple",
+    "throw": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:passenger",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:dismount"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "data modify entity @s Rotation set from entity @e[limit=1,sort=nearest] Rotation"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:add_velocity",
+                            "y": 1,
+                            "z": 1,
+                            "space": "local_horizontal",
+                            "client": true,
+                            "server": true,
+                            "set": true
+                        },
+                        "ticks": 1
+                    }
+                ]
+            }
+        },
+        "action_result": "success",
+        "priority": 0
+    },
+    "pick": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:passenger",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:invert",
+            "action": {
+                "type": "origins:mount"
+            }
+        },
+        "action_result": "success",
+        "priority": 0
+    },
+    "rotate": {
+        "condition": {
+            "type": "origins:passenger",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:passenger_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "data modify entity @s Rotation set from entity @e[limit=1,sort=nearest] Rotation"
+            }
+        }
+    }
+}

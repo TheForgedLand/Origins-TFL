@@ -1,0 +1,19 @@
+{
+    "name": "Fireball",
+    "description": "You shoot a fireball at target direction",
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:fireball",
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 7
+    },
+    "count": 1,
+    "interval": 0,
+    "start_delay": 0,
+    "speed": 0.5,
+    "divergence": 0,
+    "sound": "minecraft:entity.ghast.shoot",
+    "key": "primary"
+}

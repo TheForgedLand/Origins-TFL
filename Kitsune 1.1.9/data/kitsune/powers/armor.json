@@ -1,0 +1,29 @@
+{
+	"type": "origins:restrict_armor",
+	"head": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "kitsune:helmet"
+		}
+	},
+	"chest": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "kitsune:chestplate"
+		}
+	},
+	"legs": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "kitsune:leggings"
+		}
+	},
+	"feet": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "kitsune:boots"
+		}
+	},
+	"name": "Drip",
+	"description": "You cannot use chanimail armor, leather armor, and netherite armor because uhh..yes."
+}

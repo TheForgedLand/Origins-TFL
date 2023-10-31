@@ -1,0 +1,34 @@
+{
+	"type":"origins:multiple",
+	"active_power":{
+		"type":"origins:resource",
+		"min":1,
+		"max":8
+	},
+	"cycle":{
+		"type":"origins:active_self",
+		"key":"key.origins.secondary_active",
+		"entity_action":{
+			"type":"origins:if_else",
+			"condition":{
+				"type":"origins:resource",
+				"resource":"*:*_active_power",
+				"comparison":">=",
+				"compare_to":8
+			},
+			"if_action":{
+				"type":"origins:modify_resource",
+				"resource":"*:*_active_power",
+				"modifier":{
+					"operation":"set_total",
+					"value":1
+				}
+			},
+			"else_action":{
+				"type":"origins:change_resource",
+				"resource":"*:*_active_power",
+				"change":1
+			}
+		}
+	}
+}

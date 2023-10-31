@@ -1,0 +1,19 @@
+{
+    "name": "Cold Aura",
+    "description": "Enemies that hit you get frozen",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:actor_action",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "twilightforest:frosted",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    },
+    "cooldown": 1
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Self Improvement",
+    "description": "You can open a special menu to upgrade yourself",
+    "type": "origins:inventory",
+    "title": "Upgrade Menu",
+    "container_type": "dispenser",
+    "drop_on_death": true,
+    "key": {
+        "key": "key.saveToolbarActivator"
+    },
+    "recoverable": false
+}

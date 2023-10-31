@@ -1,0 +1,17 @@
+{
+	"type":"origins:active_self",
+	"key":"key.origins.primary_active",
+	"entity_action":{
+		"type":"origins:apply_effect",
+		"effect":{
+			"effect":"minecraft:water_breathing",
+			"duration":6000,
+			"show_particles":false,
+			"show_icon":false
+		}
+	},
+	"condition":{
+		"type":"origins:submerged_in",
+		"fluid":"minecraft:water"
+	}
+}

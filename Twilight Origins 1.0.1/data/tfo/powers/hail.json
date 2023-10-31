@@ -1,0 +1,75 @@
+{
+    "name": "Hail",
+    "description": "Shoots a barrage of ice to damage enemies and keep them away",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:snowball",
+        "cooldown": 80,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 12
+        },
+        "count": 15,
+        "interval": 0,
+        "start_delay": 0,
+        "speed": 2,
+        "divergence": 15,
+        "sound": "twilightforest:entity.twilightforest.snowqueen.hurt",
+        "tag": "{Item:{id:\"minecraft:ice\",Count:1b}}",
+        "key": "primary"
+    },
+    "l1": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:snowball"
+                }
+            }
+        },
+        "type": "origins:modify_projectile_damage",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "minecraft:snowball"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 4
+        }
+    },
+    "l2": {
+        "type": "origins:modify_projectile_damage",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "minecraft:snowball"
+        },
+        "target_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:damage",
+                    "amount": 5,
+                    "source": {
+                        "name": "freeze.player",
+                        "bypasses_armor": true
+                    }
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "twilightforest:frosted",
+                        "duration": 40,
+                        "amplifier": 1,
+                        "show_particles": true,
+                        "show_icon": true
+                    }
+                }
+            ]
+        }
+    }
+}

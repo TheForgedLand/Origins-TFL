@@ -1,0 +1,186 @@
+{
+    "name": "Golden King",
+    "description": "You can transform your golden armor into the lich armor by wearing it and using 30 experience levels",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "minecraft:golden_helmet"
+                        },
+                        {
+                            "item": "minecraft:golden_chestplate"
+                        },
+                        {
+                            "item": "minecraft:golden_leggings"
+                        },
+                        {
+                            "item": "minecraft:golden_boots"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:xp_levels",
+                "comparison": ">=",
+                "compare_to": 30
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_xp",
+                "levels": -30
+            },
+            {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "condition": {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:golden_helmet"
+                                }
+                            }
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:equipped_item_action",
+                                    "equipment_slot": "mainhand",
+                                    "action": {
+                                        "type": "origins:consume",
+                                        "amount": 1
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "/give @s golden_helmet{AttributeModifiers:[{Amount:2.0d,AttributeName:\"minecraft:generic.max_health\",Operation:0,Slot:\"head\",UUID:[I;-1175067246,-760262667,-1119084302,-1261330838]},{Amount:3.0d,AttributeName:\"minecraft:generic.armor\",Operation:0,Slot:\"head\",UUID:[I;-1291104081,-1299955575,-1866836264,409992797]}],Damage:0,Enchantments:[{id:\"minecraft:protection\",lvl:5},{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:binding_curse\",lvl:1}],Unbreakable:1b,display:{Lore:['{\"italic\":false,\"color\":\"white\",\"extra\":[{\"text\":\"\"},{\"color\":\"dark_purple\",\"text\":\"\\\\\"Death is nothing, but to live\"},{\"text\":\" \"},{\"color\":\"dark_purple\",\"text\":\"defeated and inglorious is to die daily.\\\\\"\"}],\"text\":\"\"}'],Name:'{\"italic\":false,\"extra\":[{\"text\":\"\"},{\"color\":\"yellow\",\"text\":\"Lich Helmet\"}],\"text\":\"\"}'}} 1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:golden_chestplate"
+                                }
+                            }
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:equipped_item_action",
+                                    "equipment_slot": "mainhand",
+                                    "action": {
+                                        "type": "origins:consume",
+                                        "amount": 1
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "/give @s golden_chestplate{AttributeModifiers:[{Amount:8.0d,AttributeName:\"minecraft:generic.armor\",Operation:0,Slot:\"chest\",UUID:[I;-580755767,2126464571,-1389281239,458132396]},{Amount:2.0d,AttributeName:\"minecraft:generic.max_health\",Operation:0,Slot:\"chest\",UUID:[I;1169575736,1826703460,-1708099639,-45391302]}],Damage:0,Enchantments:[{id:\"minecraft:protection\",lvl:5},{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:binding_curse\",lvl:1}],Unbreakable:1b,display:{Lore:['{\"italic\":false,\"color\":\"white\",\"extra\":[{\"text\":\"\"},{\"color\":\"dark_purple\",\"text\":\"\\\\\"Even death is not to be feared by one who has lived wisely.\\\\\"\"}],\"text\":\"\"}'],Name:'{\"italic\":false,\"extra\":[{\"text\":\"\"},{\"color\":\"yellow\",\"text\":\"Lich Chestplate\"}],\"text\":\"\"}'}} 1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:golden_leggings"
+                                }
+                            }
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:equipped_item_action",
+                                    "equipment_slot": "mainhand",
+                                    "action": {
+                                        "type": "origins:consume",
+                                        "amount": 1
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "/give @s golden_leggings{AttributeModifiers:[{Amount:2.0d,AttributeName:\"minecraft:generic.max_health\",Operation:0,Slot:\"legs\",UUID:[I;-1731779531,703285996,-1900255745,-46844295]},{Amount:6.0d,AttributeName:\"minecraft:generic.armor\",Operation:0,Slot:\"legs\",UUID:[I;465465926,-480686338,-1281766676,-1694843684]}],Damage:0,Enchantments:[{id:\"minecraft:protection\",lvl:5},{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:binding_curse\",lvl:1}],Unbreakable:1b,display:{Lore:['{\"italic\":false,\"color\":\"white\",\"extra\":[{\"text\":\"\"},{\"color\":\"dark_purple\",\"text\":\"\\\\\"It is not death that a man should fear, but he should fear never beginning to live.\\\\\"\"}],\"text\":\"\"}'],Name:'{\"italic\":false,\"extra\":[{\"text\":\"\"},{\"color\":\"yellow\",\"text\":\"Lich Leggings\"}],\"text\":\"\"}'}} 1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:golden_boots"
+                                }
+                            }
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:equipped_item_action",
+                                    "equipment_slot": "mainhand",
+                                    "action": {
+                                        "type": "origins:consume",
+                                        "amount": 1
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "/give @s golden_boots{AttributeModifiers:[{Amount:3.0d,AttributeName:\"minecraft:generic.armor\",Operation:0,Slot:\"feet\",UUID:[I;-1222799878,407718358,-1603152590,-1180982412]},{Amount:2.0d,AttributeName:\"minecraft:generic.max_health\",Operation:0,Slot:\"feet\",UUID:[I;2032423181,-725398613,-1853005424,-1738237007]}],Damage:0,Enchantments:[{id:\"minecraft:protection\",lvl:5},{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:binding_curse\",lvl:1}],Unbreakable:1b,display:{Lore:['{\"italic\":false,\"color\":\"white\",\"extra\":[{\"text\":\"\"},{\"color\":\"dark_purple\",\"text\":\"\\\\\"All that we see or seem is but a dream within a dream.\\\\\"\"}],\"text\":\"\"}'],Name:'{\"italic\":false,\"extra\":[{\"text\":\"\"},{\"color\":\"yellow\",\"text\":\"Lich Boots\"}],\"text\":\"\"}'}} 1"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:spawn_particles",
+                "particle": "minecraft:flame",
+                "count": 10,
+                "spread": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.wither.death",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 1,
+    "key": {
+        "key": "key.saveToolbarActivator"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "name": "Acclimated",
+    "description": "Natural to cold enviroments, your body is hindered by hot places, you can't use your abilities while in hot biomes and you exhaust faster",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:biome",
+                "biome": "twilightforest:fire_swamp"
+            },
+            {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:category",
+                            "category": "desert"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "savanna"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "nether"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "mesa"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 2
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "name": "Immaterial Body",
+    "description": "Your body is immune to most damage sources other than physical attacks and magic, which is extremely lethal to you",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:projectile",
+                    "projectile": "minecraft:spectral_arrow"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "magic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "magic.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob.item"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "wither"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player.item"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "wither.player"
+                },
+                {
+                    "type": "origins:out_of_world"
+                }
+            ]
+        }
+    },
+    "l1": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "magic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "magic.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "l2": {
+        "type": "origins:fire_immunity"
+    }
+}

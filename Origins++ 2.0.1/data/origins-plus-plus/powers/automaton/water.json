@@ -1,0 +1,33 @@
+{
+	"type":"origins:action_over_time",
+	"interval":5,
+	"entity_action":{
+		"type":"origins:and",
+		"actions":[
+			{
+				"type":"origins:execute_command",
+				"command":"resource change @s origins-plus-plus:automaton/firebar -1"
+			},
+			{
+				"type":"origins:execute_command",
+				"command":"resource change @s origins-plus-plus:automaton/waterbar 2"
+			}
+		]
+	},
+	"condition":{
+		"type":"origins:or",
+		"conditions":[
+			{
+				"type":"origins:in_rain"
+			},
+			{
+				"type":"origins:in_block",
+				"block_condition":{
+					"type":"origins:block",
+					"block":"minecraft:water"
+				}
+			}
+		]
+	},
+	"hidden":true
+}

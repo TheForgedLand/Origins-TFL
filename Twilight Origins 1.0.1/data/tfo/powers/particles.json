@@ -1,0 +1,8 @@
+{
+    "name": "particles",
+    "description": "particles for androxus",
+    "type": "origins:particle",
+    "particle": "minecraft:soul_fire_flame",
+    "frequency": 2,
+    "visible_in_first_person": true
+}

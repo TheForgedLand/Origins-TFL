@@ -1,0 +1,15 @@
+{
+    "origins": [
+        "tfo:nightborn",
+        "tfo:lamia",
+        "tfo:lich",
+        "tfo:hydra",
+        "tfo:urghast",
+        "tfo:phantomknight",
+        "tfo:tfoyeti",
+        "tfo:snowqueen",
+        "tfo:minoshroom",
+        "tfo:tfogolem"
+    ],
+    "enabled": true
+}

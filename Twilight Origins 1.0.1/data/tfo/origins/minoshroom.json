@@ -1,0 +1,16 @@
+{
+    "name": "Shroomzerker",
+    "description": "A fierce warrior trained in the same arts as the powerful beast in the deepest layer of the maze, you are a killing machine powered by mushrooms",
+    "powers": [
+        "tfo:brute",
+        "tfo:momentum",
+        "tfo:freefighter",
+        "tfo:combatmaneuvers",
+        "tfo:mushroom",
+        "tfo:minotaur"
+    ],
+    "icon": {
+        "item": "twilightforest:meef_stroganoff"
+    },
+    "impact": 1
+}

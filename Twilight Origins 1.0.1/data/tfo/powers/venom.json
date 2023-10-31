@@ -1,0 +1,52 @@
+{
+    "name": "Venomous Attacks",
+    "description": "You imbue your attacks and arrows in venom, causing them to apply poison for a brief period of time",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:poison",
+                    "duration": 80,
+                    "amplifier": 0,
+                    "show_particles": true,
+                    "show_icon": true
+                }
+            }
+        },
+        "cooldown": 1
+    },
+    "l1": {
+        "type": "origins:modify_projectile_damage",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:projectile",
+                    "projectile": "minecraft:arrow"
+                },
+                {
+                    "type": "origins:projectile",
+                    "projectile": "minecraft:spectral_arrow"
+                },
+                {
+                    "type": "origins:projectile",
+                    "projectile": "minecraft:tipped_arrow"
+                }
+            ]
+        },
+        "target_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:poison",
+                "duration": 60,
+                "amplifier": 1,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    }
+}

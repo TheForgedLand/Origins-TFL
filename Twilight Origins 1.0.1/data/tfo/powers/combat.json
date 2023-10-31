@@ -1,0 +1,37 @@
+{
+    "name": "Spectral Combatant",
+    "description": "You were specialized in swords for combat, you can't use ranged weapons",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "twilightforest:triple_bow"
+            },
+            {
+                "item": "twilightforest:ice_bow"
+            },
+            {
+                "item": "twilightforest:ender_bow"
+            },
+            {
+                "item": "twilightforest:seeker_bow"
+            },
+            {
+                "item": "minecraft:bow"
+            },
+            {
+                "item": "minecraft:crossbow"
+            },
+            {
+                "item": "minecraft:trident"
+            },
+            {
+                "item": "minecraft:egg"
+            },
+            {
+                "item": "minecraft:snowball"
+            }
+        ]
+    }
+}

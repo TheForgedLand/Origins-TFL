@@ -1,0 +1,26 @@
+{
+    "name": "Ice Bomb",
+    "description": "You know the recipe to create ice bombs",
+    "type": "origins:recipe",
+    "recipe": {
+        "id": "icebomb",
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+            "#I#",
+            "I#I",
+            "#I#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:snowball"
+            },
+            "I": {
+                "item": "minecraft:ice"
+            }
+        },
+        "result": {
+            "item": "twilightforest:ice_bomb",
+            "count": 4
+        }
+    }
+}

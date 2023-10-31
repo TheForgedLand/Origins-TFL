@@ -1,0 +1,37 @@
+{
+    "name": "Mana",
+    "description": "Your body produces mana to use on your magic skills and restores it over time",
+    "type": "origins:multiple",
+    "mana": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 6
+        }
+    },
+    "regen": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tfo:mana_mana",
+            "comparison": "<",
+            "compare_to": 7
+        },
+        "type": "origins:action_over_time",
+        "interval": 30,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tfo:mana_mana",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

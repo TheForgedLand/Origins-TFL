@@ -1,0 +1,60 @@
+{
+    "name": "Aurora Veil",
+    "description": "You are immune to freezing and every damage bigger than two hearts",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "freeze.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "freeze"
+                }
+            ]
+        }
+    },
+    "l1": {
+        "type": "origins:effect_immunity",
+        "effect": "twilightforest:frosted"
+    },
+    "l2": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.glass.break",
+                        "volume": 1,
+                        "pitch": 1
+                    }
+                ]
+            }
+        },
+        "cooldown": 1
+    },
+    "l3": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

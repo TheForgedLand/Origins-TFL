@@ -1,0 +1,46 @@
+{
+    "name": "Fiery",
+    "description": "Fiery protection, burns attackers",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:fiery_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 24
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 6
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:fiery_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 3
+            }
+        },
+        "cooldown": 1
+    }
+}

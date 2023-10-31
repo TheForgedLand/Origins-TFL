@@ -1,0 +1,8 @@
+{
+    "name": "Fireproof Skin",
+    "description": "Your body has a supernatural resistance to fire, not even burning",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:fire_immunity"
+    }
+}

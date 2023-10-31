@@ -1,0 +1,52 @@
+{
+    "name": "Carnivore",
+    "description": "Your bloodline made your body only capable of digesting meat",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "origins:meat"
+                        }
+                    },
+                    {
+                        "type": "origins:meat"
+                    }
+                ]
+            },
+            {
+                "type": "origins:food"
+            },
+            {
+                "inverted": true,
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "twilightforest:hydra_chop"
+                    },
+                    {
+                        "item": "twilightforest:meef_stroganoff"
+                    },
+                    {
+                        "item": "twilightforest:raw_venison"
+                    },
+                    {
+                        "item": "twilightforest:cooked_venison"
+                    },
+                    {
+                        "item": "twilightforest:raw_meef"
+                    },
+                    {
+                        "item": "twilightforest:cooked:meef"
+                    }
+                ]
+            }
+        ]
+    }
+}

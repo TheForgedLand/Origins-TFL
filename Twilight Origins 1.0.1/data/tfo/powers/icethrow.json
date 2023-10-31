@@ -1,0 +1,69 @@
+{
+    "name": "Launch Snowball",
+    "description": "You create a giant snowball at your feet and throws it at your enemies",
+    "condition": {
+        "inverted": true,
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:biome",
+                "biome": "twilightforest:fire_swamp"
+            },
+            {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:category",
+                            "category": "desert"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "savanna"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "nether"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "mesa"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "twilightforest:thrown_ice",
+                "entity_action": {
+                    "type": "origins:add_velocity",
+                    "y": 0.1,
+                    "z": 1,
+                    "space": "local",
+                    "client": true,
+                    "server": true
+                }
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "twilightforest:entity.twilightforest.alphayeti.throw",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 400,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 12
+    },
+    "key": "primary"
+}

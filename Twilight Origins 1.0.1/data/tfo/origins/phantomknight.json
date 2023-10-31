@@ -1,0 +1,17 @@
+{
+    "name": "Phantom Knight",
+    "description": "Once a fierce warrior, you were cursed to rise and fight in death as you fought in life",
+    "powers": [
+        "tfo:ghostly",
+        "tfo:immaterialbody",
+        "tfo:combat",
+        "tfo:pactofsteel",
+        "tfo:fadingmemories",
+        "tfo:nightharvest",
+        "tfo:ghostrider"
+    ],
+    "icon": {
+        "item": "twilightforest:phantom_helmet"
+    },
+    "impact": 2
+}

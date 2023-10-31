@@ -1,0 +1,16 @@
+{
+    "name": "Ur-Ghast Infused",
+    "description": "Living near the Dark Tower upon the presence of the Ur-Ghast for so long started modifying your body, granting you some of its powers",
+    "powers": [
+        "tfo:tantrum",
+        "tfo:enrage",
+        "tfo:frailskin",
+        "tfo:fireball",
+        "tfo:blast",
+        "tfo:snowball"
+    ],
+    "icon": {
+        "item": "twilightforest:carminite"
+    },
+    "impact": 1
+}

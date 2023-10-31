@@ -1,0 +1,11 @@
+{
+    "pack": {
+        "name": "Twilight Origins",
+        "id": "tfo",
+        "pack_format": 10,
+        "authors": [
+            "Caio \"ElementalTh3\""
+        ],
+        "description": "An Origins datapack based on the Twilight Forest mod"
+    }
+}

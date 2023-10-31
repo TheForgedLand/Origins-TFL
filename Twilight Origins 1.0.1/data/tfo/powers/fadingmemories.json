@@ -1,0 +1,28 @@
+{
+    "name": "Fading Memories",
+    "description": "Due to your soul being unstable, you have less health, reduced movement speed and you can't sleep",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -8
+        },
+        "update_health": true
+    },
+    "l1": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": -0.05
+        },
+        "update_health": true
+    },
+    "l2": {
+        "type": "origins:prevent_sleep",
+        "message": "Your torment will never end",
+        "set_spawn_point": true
+    }
+}

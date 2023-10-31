@@ -1,0 +1,84 @@
+{
+    "name": "Protective Fur",
+    "description": "Your fur protects you from freezing but makes you unable to wear full plate armor, only being able to wear chainmail and leather",
+    "type": "origins:multiple",
+    "l2": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:leather_helmet"
+                },
+                {
+                    "item": "minecraft:chainmail_helmet"
+                },
+                {
+                    "item": "twilightforest:arctic_helmet"
+                },
+                {
+                    "item": "twilightforest:yeti_helmet"
+                }
+            ]
+        },
+        "chest": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:leather_chestplate"
+                },
+                {
+                    "item": "minecraft:chainmail_chestplate"
+                },
+                {
+                    "item": "twilightforest:arctic_chestplate"
+                },
+                {
+                    "item": "twilightforest:yeti_chestplate"
+                }
+            ]
+        },
+        "legs": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:leather_leggings"
+                },
+                {
+                    "item": "minecraft:chainmail_leggings"
+                },
+                {
+                    "item": "twilightforest:arctic_leggings"
+                },
+                {
+                    "item": "twilightforest:yeti_leggings"
+                }
+            ]
+        },
+        "feet": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:leather_boots"
+                },
+                {
+                    "item": "minecraft:chainmail_boots"
+                },
+                {
+                    "item": "twilightforest:arctic_boots"
+                },
+                {
+                    "item": "twilightforest:yeti_boots"
+                }
+            ]
+        }
+    },
+    "l1": {
+        "type": "origins:effect_immunity",
+        "effect": "twilightforest:frosted"
+    }
+}

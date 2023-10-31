@@ -1,0 +1,21 @@
+{
+    "name": "Ironwood Golem",
+    "description": "You are a synthethic lifeform built long ago, now you wander the forest in search of a purpose",
+    "powers": [
+        "tfo:upgrade",
+        "tfo:chassis",
+        "tfo:golem/chassis/copper",
+        "tfo:golem/chassis/iron",
+        "tfo:golem/chassis/gold",
+        "tfo:golem/chassis/netherite",
+        "tfo:golem/chassis/ironwood",
+        "tfo:golem/chassis/steeleaf",
+        "tfo:golem/chassis/knightmetal",
+        "tfo:golem/chassis/fiery"
+    ],
+    "icon": {
+        "item": "twilightforest:raw_ironwood"
+    },
+    "unchoosable": true,
+    "impact": 3
+}

@@ -1,0 +1,50 @@
+{
+    "name": "Knightmetal",
+    "description": "Knightmetal protection, damages attackers",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:knightmetal_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 20
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:knightmetal_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 2,
+                "source": {
+                    "name": "thorns",
+                    "bypasses_armor": true
+                }
+            }
+        },
+        "cooldown": 1
+    }
+}

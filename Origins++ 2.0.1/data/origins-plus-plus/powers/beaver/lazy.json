@@ -1,0 +1,125 @@
+{
+	"type":"origins:stacking_status_effect",
+	"min_stacks":0,
+	"max_stacks":1,
+	"duration_per_stack":20,
+	"effect":{
+		"effect":"minecraft:mining_fatigue",
+		"amplifier":2,
+		"show_particles":false,
+		"show_icon":false
+	},
+	"condition":{
+		"type":"origins:or",
+		"conditions":[
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:oak_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:mangrove_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:spruce_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:birch_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:jungle_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:acacia_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:dark_oak_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:crimson_stem\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:warped_stem\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_oak_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_spruce_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_birch_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_jungle_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_acacia_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_dark_oak_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_crimson_stem\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_mangrove_log\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			},
+			{
+				"type":"origins:command",
+				"command":"execute if entity @s[nbt={Inventory: [{id:\"minecraft:stripped_warped_stem\",Count:64b}]}]",
+				"comparison":">",
+				"compare_to":0
+			}
+		]
+	}
+}

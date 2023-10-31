@@ -1,0 +1,17 @@
+{
+    "name": "Yeti",
+    "description": "Native from the cold lands of the Twilight Forest, you are an unstoppable machine nature built",
+    "powers": [
+        "tfo:hardened",
+        "tfo:acclimated",
+        "tfo:protectivefur",
+        "tfo:flammable",
+        "tfo:throw",
+        "tfo:icethrow",
+        "tfo:icequake"
+    ],
+    "icon": {
+        "item": "twilightforest:alpha_yeti_fur"
+    },
+    "impact": 2
+}

@@ -1,0 +1,27 @@
+{
+	"type":"origins:active_self",
+	"key":"key.origins.primary_active",
+	"cooldown":600,
+	"hud_render":{
+		"should_render":true,
+		"bar_index":6
+	},
+	"entity_action":{
+		"type":"origins:raycast",
+		"distance":20,
+		"entity":false,
+		"before_action":{
+			"type":"origins:execute_command",
+			"command":"tag @s add tping"
+		},
+		"command_along_ray":"execute positioned ~ ~ ~ if block ~ ~ ~ air run tp @e[tag=tping,sort=nearest] ~ ~ ~"
+	},
+	"hit_action":{
+		"type":"origins:execute_command",
+		"command":"tag @e remove tping"
+	},
+	"miss_action":{
+		"type":"origins:execute_command",
+		"command":"tp @s ^ ^ ^15"
+	}
+}

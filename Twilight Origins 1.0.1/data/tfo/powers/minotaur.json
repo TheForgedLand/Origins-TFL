@@ -1,0 +1,77 @@
+{
+    "name": "Minotaur Style",
+    "description": "You know the arts of minotaur fighting, allowing you to craft special weapons",
+    "type": "origins:multiple",
+    "goldminotauraxe": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "goldenminotauraxe",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "cgw",
+                "gGg",
+                "rgb"
+            ],
+            "key": {
+                "c": {
+                    "item": "minecraft:crimson_fungus"
+                },
+                "g": {
+                    "item": "minecraft:gold_ingot"
+                },
+                "w": {
+                    "item": "minecraft:warped_fungus"
+                },
+                "G": {
+                    "item": "minecraft:golden_axe"
+                },
+                "r": {
+                    "item": "minecraft:red_mushroom"
+                },
+                "b": {
+                    "item": "minecraft:brown_mushroom"
+                }
+            },
+            "result": {
+                "item": "twilightforest:gold_minotaur_axe",
+                "count": 1
+            }
+        }
+    },
+    "diamondminotauraxe": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "diamondminotauraxe",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "cdw",
+                "dDd",
+                "rdb"
+            ],
+            "key": {
+                "c": {
+                    "item": "minecraft:crimson_fungus"
+                },
+                "d": {
+                    "item": "minecraft:diamond"
+                },
+                "w": {
+                    "item": "minecraft:warped_fungus"
+                },
+                "D": {
+                    "item": "minecraft:diamond_axe"
+                },
+                "r": {
+                    "item": "minecraft:red_mushroom"
+                },
+                "b": {
+                    "item": "minecraft:brown_mushroom"
+                }
+            },
+            "result": {
+                "item": "twilightforest:diamond_minotaur_axe",
+                "count": 1
+            }
+        }
+    }
+}

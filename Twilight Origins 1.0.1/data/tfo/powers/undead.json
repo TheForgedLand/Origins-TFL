@@ -1,0 +1,27 @@
+{
+    "name": "Curse of Eternal Life",
+    "description": "Your ritual for eternal took your humanity from you, making you an undead, while under the sun you start burning and taking double damage while burning",
+    "type": "origins:multiple",
+    "burn": {
+        "condition": {
+            "type": "origins:exposed_to_sun"
+        },
+        "type": "origins:burn",
+        "interval": 20,
+        "burn_duration": 3
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:on_fire"
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "l2": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    }
+}

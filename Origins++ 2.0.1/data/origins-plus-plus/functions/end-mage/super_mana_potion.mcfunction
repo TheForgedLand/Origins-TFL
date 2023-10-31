@@ -1,0 +1,2 @@
+clear @s minecraft:dragon_breath 1
+give @s minecraft:potion{tag:superempty,display:{Name:'[{"translate":"origins-plus-plus.item.super_mana_potion","italic":false,"color":"dark_purple"}]',Lore:['[{"translate":"origins-plus-plus.item.super_mana_potion.capacity","italic":false}]']}} 1

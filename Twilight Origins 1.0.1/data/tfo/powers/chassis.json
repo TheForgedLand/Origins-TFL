@@ -1,0 +1,5 @@
+{
+    "name": "Chassis",
+    "description": "Your chassis acts as your armor and skin, its the first slot in your Upgrade Menu and in can be any metal block",
+    "type": "origins:restrict_armor"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Poison Dust",
+    "description": "Throw a pile of poisonous dust, dispersing on contact and sickening creatures near it",
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:potion",
+    "cooldown": 300,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 8
+    },
+    "count": 5,
+    "interval": 0,
+    "start_delay": 0,
+    "speed": 2,
+    "divergence": 6,
+    "sound": "twilightforest:entity.twilightforest.naga.hiss",
+    "tag": "{NoGravity:0b,Item:{id:\"twilightforest:borer_essence\",Count:1b,tag:{CustomPotionColor:6989876,CustomPotionEffects:[{Id:2,Amplifier:1b,Duration:200},{Id:4,Amplifier:1b,Duration:200},{Id:9,Amplifier:0b,Duration:200},{Id:15,Amplifier:0b,Duration:200},{Id:18,Amplifier:0b,Duration:200},{Id:19,Amplifier:1b,Duration:200}]}}}",
+    "key": "primary"
+}

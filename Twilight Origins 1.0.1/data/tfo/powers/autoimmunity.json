@@ -1,0 +1,13 @@
+{
+    "name": "Autoimmunity",
+    "description": "You are immune to most noxious effects due to your body and magic nature",
+    "type": "origins:effect_immunity",
+    "effect": "minecraft:poison",
+    "effects": [
+        "minecraft:nausea",
+        "minecraft:slowness",
+        "minecraft:blindness",
+        "minecraft:weakness",
+        "minecraft:mining_fatigue"
+    ]
+}

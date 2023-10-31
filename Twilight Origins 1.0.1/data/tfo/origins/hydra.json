@@ -1,0 +1,16 @@
+{
+    "name": "Hydra Blood",
+    "description": "You are a heir of an ancient bloodline, inhereting your powers from it",
+    "powers": [
+        "tfo:fireimmunity",
+        "tfo:vitality",
+        "tfo:carnivore",
+        "tfo:magma",
+        "tfo:firebreath",
+        "tfo:stroganoff"
+    ],
+    "icon": {
+        "item": "twilightforest:fiery_blood"
+    },
+    "impact": 1
+}

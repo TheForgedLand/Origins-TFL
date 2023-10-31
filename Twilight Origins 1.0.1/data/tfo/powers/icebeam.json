@@ -1,0 +1,76 @@
+{
+    "name": "Ice Beam",
+    "description": "Unleash a powerful ray of frost to freeze enemies in place",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:spawn_particles",
+                "particle": "twilightforest:snow",
+                "count": 16,
+                "speed": 1
+            },
+            {
+                "type": "origins:raycast",
+                "distance": 48,
+                "block": true,
+                "entity": true,
+                "shape_type": "collider",
+                "fluid_handling": "none",
+                "bientity_condition": {
+                    "type": "origins:distance",
+                    "comparison": "<=",
+                    "compare_to": 48
+                },
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "fill ~-1 ~2 ~-1 ~1 ~-1 ~1 minecraft:packed_ice outline"
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "fill ~ ~1 ~ ~ ~ ~ minecraft:ice"
+                                        },
+                                        "ticks": 1
+                                    },
+                                    {
+                                        "type": "origins:damage",
+                                        "amount": 4,
+                                        "source": {
+                                            "name": "freeze.player"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "command_along_ray": "particle twilightforest:snow_warning",
+                "command_step": 2
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "twilightforest:entity.twilightforest.snowqueen.attack",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 400,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 0
+    },
+    "key": "secondary"
+}

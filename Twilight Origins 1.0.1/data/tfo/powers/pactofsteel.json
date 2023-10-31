@@ -1,0 +1,67 @@
+{
+    "name": "Iron Stands Eternal",
+    "description": "You and your armor are one, you get more physical resistances and your armor is not lost on death, tripled if you are holding a shield on your offhand",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.knockback_resistance",
+            "operation": "addition",
+            "value": 0.2
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 4
+            },
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "update_health": true
+    },
+    "l1": {
+        "type": "origins:keep_inventory",
+        "slots": [
+            39,
+            38,
+            37,
+            36
+        ]
+    },
+    "l2": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "minecraft:shield"
+                    },
+                    {
+                        "item": "twilightforest:knightmetal_shield"
+                    }
+                ]
+            }
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 8
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 8
+            }
+        ],
+        "tick_rate": 4,
+        "update_health": false
+    }
+}

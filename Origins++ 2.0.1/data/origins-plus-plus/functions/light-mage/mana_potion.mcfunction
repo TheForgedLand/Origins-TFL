@@ -1,0 +1,2 @@
+clear @s minecraft:honey_bottle 1
+give @s minecraft:potion{tag:empty,display:{Name:'[{"translate":"origins-plus-plus.item.mana_potion","italic":false,"color":"dark_purple"}]',Lore:['[{"translate":"origins-plus-plus.item.mana_potion.capacity","italic":false}]']}} 1

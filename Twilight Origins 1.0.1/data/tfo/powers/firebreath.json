@@ -1,0 +1,90 @@
+{
+    "name": "Fire Breath",
+    "description": "Breathes fire in a short distance at the cost of some exhaustion",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "minecraft:water",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    {
+                        "type": "origins:in_rain"
+                    }
+                ]
+            },
+            {
+                "type": "origins:food_level",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 16,
+        "block": true,
+        "entity": true,
+        "shape_type": "collider",
+        "fluid_handling": "none",
+        "bientity_condition": {
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 16
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:damage",
+                        "amount": 2,
+                        "source": {
+                            "name": "inFire.player",
+                            "fire": true
+                        }
+                    },
+                    {
+                        "type": "origins:set_on_fire",
+                        "duration": 4
+                    }
+                ]
+            }
+        },
+        "block_action": {
+            "type": "origins:add_block",
+            "block": "minecraft:fire"
+        },
+        "hit_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.blaze.shoot",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 0.2
+                }
+            ]
+        },
+        "command_along_ray": "particle minecraft:flame",
+        "command_step": 0.2,
+        "command_along_ray_only_on_hit": true
+    },
+    "cooldown": 3,
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": true
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "Netherite",
+    "description": "netherite protection, fire immunity",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:netherite_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 20
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 12
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:netherite_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:fire_immunity"
+    }
+}

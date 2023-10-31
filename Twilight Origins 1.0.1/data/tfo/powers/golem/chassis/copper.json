@@ -1,0 +1,81 @@
+{
+    "name": "Copper",
+    "description": "Chainmail protection, lightning immunity",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:0b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:2b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:6b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:8b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 12
+        },
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:0b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:2b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:6b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if data entity @s ForgeCaps.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"minecraft:copper_block\",Slot:8b,Count:1b}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "kitsune",
+  "version": "1.1.9",
+
+  "name": "Kitsune",
+  "description": "Kitsune Origin for Culture man",
+  "authors": [
+    "HungryBoy02/HungryGaming02",
+    "TeyTey428"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+   
+ 
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.x.x",
+    "java": ">=16"
+	}
+}
+  
+  

@@ -1,0 +1,38 @@
+{
+    "name": "Magma Bombs",
+    "description": "Fires a cluster of magma that explodes after making contact with blocks or creatures",
+    "type": "origins:multiple",
+    "magma": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:firework_rocket",
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 15
+        },
+        "count": 4,
+        "interval": 0,
+        "start_delay": 0,
+        "speed": 1,
+        "divergence": 16,
+        "sound": "twilightforest:entity.twilightforest.hydra.growl",
+        "tag": "{NoGravity:1b,Life:1,LifeTime:20,FireworksItem:{id:magma_block,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Trail:1b,Colors:[I;6032910,4064774,12208138,15378734,16769639],FadeColors:[I;16711680]},{Type:0,Colors:[I;6032910,4064774,12208138,15378734]},{Type:4,Colors:[I;6032910,4064774,12208138,16769639]},{Type:4,Colors:[I;6032910,4064774,15378734,16769639]},{Type:0,Colors:[I;6032910,12208138,15378734,16769639]},{Type:0,Colors:[I;4064774,12208138,15378734,16769639]}]}}}}",
+        "key": "primary"
+    }
+}

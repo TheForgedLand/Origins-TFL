@@ -1,0 +1,29 @@
+{
+    "name": "Ironwood",
+    "description": "Ironwood protection, no knockback",
+    "hidden": true,
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s cardinal_components.\"apoli:powers\".Powers[{Type: \"tfo:upgrade\"}].Data.Items.[{id:\"twilightforest:ironwood_block\",Slot:0b,Count:1b}]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 16
+        },
+        "modifiers": [
+            {
+                "attribute": "generic.knockback_resistance",
+                "operation": "addition",
+                "value": 1
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    }
+}

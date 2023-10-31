@@ -1,0 +1,59 @@
+{
+    "name": "Ghost Rider",
+    "description": "You summon your trusty steed to aid you in your journey for 3 minutes",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_entity",
+                    "entity_type": "minecraft:skeleton_horse",
+                    "tag": "{Health:40f,Tame:1b,SkeletonTrap:0b,Tags:[\"deathknight\"],CustomName:'{\"text\":\"Androxus\",\"italic\":true}',Attributes:[{Name:generic.max_health,Base:40},{Name:generic.movement_speed,Base:0.4},{Name:generic.armor,Base:10},{Name:horse.jump_strength,Base:1.1}],SaddleItem:{id:\"minecraft:saddle\",Count:1b}}",
+                    "entity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 100,
+                                    "source": {
+                                        "name": "wither"
+                                    }
+                                },
+                                "ticks": 3600
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.trident.thunder",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @e[tag=deathknight] tfo:ghostly"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @e[tag=deathknight] tfo:immaterialbody"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @e[tag=deathknight] tfo:particles"
+                }
+            ]
+        },
+        "cooldown": 3600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        },
+        "key": "secondary"
+    }
+}

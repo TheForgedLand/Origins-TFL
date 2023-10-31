@@ -1,0 +1,12 @@
+{
+    "name": "Shed Scales",
+    "description": "Some scales shed from your body after sleeping",
+    "type": "origins:action_on_wake_up",
+    "entity_action": {
+        "type": "origins:give",
+        "stack": {
+            "item": "twilightforest:naga_scale",
+            "amount": 3
+        }
+    }
+}

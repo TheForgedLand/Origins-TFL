@@ -1,0 +1,28 @@
+{
+    "name": "Hardened by Winter",
+    "description": "Your body is highly adapted to harsh, cold biomes, granting you absurds amount of health, natural armor and making yours attacks deal more damage and launch targets away",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 20
+    },
+    "modifiers": [
+        {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 6
+        },
+        {
+            "attribute": "generic.attack_knockback",
+            "operation": "addition",
+            "value": 1
+        },
+        {
+            "attribute": "generic.attack_damage",
+            "operation": "addition",
+            "value": 2
+        }
+    ],
+    "update_health": true
+}

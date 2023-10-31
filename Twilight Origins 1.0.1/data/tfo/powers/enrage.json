@@ -1,0 +1,28 @@
+{
+    "name": "Enrage",
+    "description": "While under 1/3 of your health you deal double damage",
+    "type": "origins:multiple",
+    "l0": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<",
+            "compare_to": 8
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<",
+            "compare_to": 8
+        },
+        "type": "origins:particle",
+        "particle": "minecraft:angry_villager",
+        "frequency": 2,
+        "visible_in_first_person": true
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Shield Aura",
+    "description": "You create four protective shields that will negate the damage from the next four attacks",
+    "type": "origins:multiple",
+    "l0": {
+        "type": "origins:particle",
+        "particle": "twilightforest:ominous_flame",
+        "frequency": 4,
+        "visible_in_first_person": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tfo:mana_mana",
+            "comparison": "==",
+            "compare_to": 7
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tfo:mana_mana",
+                    "change": -7,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tffeature shield @s set 4"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.wither.ambient",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:flame",
+                    "count": 12,
+                    "speed": 1,
+                    "spread": {
+                        "x": 0.5,
+                        "y": 0.5,
+                        "z": 0.5
+                    }
+                }
+            ]
+        },
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "key.loadToolbarActivator"
+        }
+    }
+}

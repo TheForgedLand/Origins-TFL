@@ -1,0 +1,34 @@
+{
+    "name": "Snow Carpet",
+    "description": "You freeze nearby water and obsidian if toggled",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "retain_state": true
+    },
+    "l1": {
+        "condition": {
+            "type": "origins:power_type",
+            "power_type": "tfo:icebridge_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:frosted_ice replace minecraft:water"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:obsidian replace minecraft:lava"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Lich",
+    "description": "Once a powerful mage, you made a ritual for eternal life, at the cost of your own humanity...",
+    "powers": [
+        "tfo:mana",
+        "tfo:weakflesh",
+        "tfo:undead",
+        "tfo:orb",
+        "tfo:explosionorb",
+        "tfo:aura",
+        "tfo:gold"
+    ],
+    "icon": {
+        "item": "twilightforest:twilight_scepter"
+    },
+    "impact": 3
+}

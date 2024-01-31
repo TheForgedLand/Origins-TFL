@@ -27,8 +27,8 @@ jobs:
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
           echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-#          apt update && apt -y upgrade
-          apt -y install zip
+          sudo apt update && sudo apt -y upgrade
+          sudo apt -y install zip
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out Repository code

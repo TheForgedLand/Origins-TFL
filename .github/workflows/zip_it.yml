@@ -6,9 +6,10 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "1.19.2" branch
   push:
-    branches: [ "1.19.2" ]
-#  pull_request:
- #   branches: [ "1.19.2" ]
+    branches: 
+      - '1.19.2'
+    paths:
+      - '/src/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,8 +39,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: List files in the repository
         run: |
-          ls -a ${{ github.workspace }}
+          ls -a ${{ github.workspace }}/src
           
-          
+      - name: upload build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Origins-TFL-fabric-1.19.2
+          path: /src/**
       - run: echo "🍏 This job's status is ${{ job.status }}."
 

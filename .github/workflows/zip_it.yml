@@ -40,11 +40,12 @@ jobs:
       - name: List files in the repository
         run: |
           ls -a ${{ github.workspace }}/src
+          ls -a
           
       - name: upload build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Origins-TFL-fabric-1.19.2
-          path: /src/**
+          path: src/**
       - run: echo "🍏 This job's status is ${{ job.status }}."
 

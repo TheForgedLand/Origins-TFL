@@ -1,7 +1,7 @@
 {
-  "type": "origins:action_on_callback",
-  "entity_action_added":
-	"type": "origins:and",
+	"type": "origins:action_on_callback",
+	"entity_action_added": {
+		"type": "origins:and",
 		"actions": [
 			{
 				"type": "origins:execute_command",
@@ -15,9 +15,9 @@
 			}
 		]
 	},
-  "entity_action_removed":
+	"entity_action_removed":
 	{
-    "type": "origins:and",
+		"type": "origins:and",
 		"actions": [
 			{
 				"type": "origins:execute_command",
@@ -39,7 +39,7 @@
 				"command": "attribute @s minecraft:generic.movement_speed  base set 0.7",
 				"permission_level": 4
 			}
-		]  
+		]
 	},
 	"entity_action_respawned": {
 		"type": "origins:and",
@@ -56,6 +56,6 @@
 			}
 		]
 	},
-  "execute_chosen_when_orb": true,
+	"execute_chosen_when_orb": true,
 	"hidden": true
 }

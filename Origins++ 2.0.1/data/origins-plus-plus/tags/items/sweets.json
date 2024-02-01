@@ -1,5 +1,150 @@
 {
-	"values":[
+	"values": [
+		{
+			"id": "farmersdelight:sweet_berry_cheesecake_slice",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:sweet_berry_cookie",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:sweet_berry_jelly_sandwich",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:berry_sweet_roll",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:glow_berry_sweet_roll",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:sweet_berry_juice",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:sweet_berry_jelly",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:hot_cocoa",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:cake_slice",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:apple_pie_slice",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:chocolate_pie_slice",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:honey_cookie",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:melon_popsicle",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:peanut_butter_honey_sandwich",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:sweet_roll",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:chocolate_cookie",
+			"required": false
+		},
+		{
+			"id": "expandeddelight:sugar_cookie",
+			"required": false
+		},
+		{
+			"id": "#kitsune:berries",
+			"required": false
+		},
+		{
+			"id": "brewinandchewin:cocoa_fudge",
+			"required": false
+		},
+		{
+			"id": "#c:fruits",
+			"required": false
+		},
+		{
+			"id": "byg:green_apple_pie",
+			"required": false
+		},
+		{
+			"id": "byg:cooked_joshua_fruit",
+			"required": false
+		},
+		{
+			"id": "create:bar_of_chocolate",
+			"required": false
+		},
+		{
+			"id": "create:sweet_roll",
+			"required": false
+		},
+		{
+			"id": "create:honeyed_apple",
+			"required": false
+		},
+		{
+			"id": "ecologics:prickly_pear",
+			"required": false
+		},
+		{
+			"id": "ecologics:cooked_prickly_pear",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:incomplete_apple_pie",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:incomplete_pumpkin_pie",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:incomplete_sweet_berry_cheesecake",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:incomplete_rose_hip_pie",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:pumpkin_pie_slice",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:incomplete_coffee_cake",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:coffee_cake_sponge",
+			"required": false
+		},
+		{
+			"id": "delightfulcreators:coffee_cake_coating",
+			"required": false
+		},
+		{
+			"id": "twilightforest:experiment_115",
+			"required": false
+		},
+
 		"minecraft:apple",
 		"minecraft:cake",
 		"minecraft:chorus_fruit",

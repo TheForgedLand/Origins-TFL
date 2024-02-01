@@ -1,5 +1,37 @@
 {
-	"values":[
+	"values": [
+		{
+			"id": "#c:raw_beef",
+			"required": false
+		},
+		{
+			"id": "#c:raw_pork",
+			"required": false
+		},
+		{
+			"id": "#origins-plus-plus:raw_fish",
+			"required": false
+		},
+		{
+			"id": "#brewinandchewin:raw_meats",
+			"required": false
+		},
+		{
+			"id": "farmersdelight:ham",
+			"required": false
+		},
+		{
+			"id": "nethersdelight:hoglin_loin",
+			"required": false
+		},
+		{
+			"id": "twilightforest:raw_venison",
+			"required": false
+		},
+		{
+			"id": "twilightforest:raw_meef",
+			"required": false
+		},
 		"minecraft:beef",
 		"minecraft:chicken",
 		"minecraft:cod",

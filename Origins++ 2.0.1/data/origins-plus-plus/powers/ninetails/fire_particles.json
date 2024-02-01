@@ -1,9 +1,13 @@
 {
-	"type":"origins:action_over_time",
-	"entity_action":{
-		"type":"origins:execute_command",
-		"command":"particle minecraft:flame ~ ~ ~ 1 1 1 0.15 15"
+	"type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "particle minecraft:flame ~ ~ ~ 1 1 1 0.15 15 normal @a[distance=2..]"
 	},
-	"interval":10,
-	"hidden":true
+	"interval": 10,
+	"hidden": true,
+	"condition": {
+		"type": "origins:power_active",
+		"power": "origins-plus-plus:ninetails/willow"
+	}
 }

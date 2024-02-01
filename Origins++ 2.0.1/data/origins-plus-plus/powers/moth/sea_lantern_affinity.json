@@ -4,7 +4,7 @@
 	"max_stacks":1,
 	"duration_per_stack":20,
 	"effect":{
-		"effect":"minecraft:water_breathing",
+		"effect":"minecraft:regeneration",
 		"show_particles":false,
 		"show_icon":false
 	},

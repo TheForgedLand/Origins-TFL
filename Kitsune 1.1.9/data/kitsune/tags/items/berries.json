@@ -1,0 +1,84 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries",
+    {
+      "id": "farmersdelight:sweet_berry_cheesecake_slice",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:sweet_berry_cookie",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:glow_berry_custard",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:sweet_berry_jelly_sandwich",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:glow_berry_jelly_sandwich",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:berry_sweet_roll",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:glow_berry_sweet_roll",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:sweet_berry_juice",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:glow_berry_juice",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:sweet_berry_jelly",
+      "required": false
+    },
+    {
+      "id": "expandeddelight:glow_berry_jelly",
+      "required": false
+    },
+    {
+      "id": "create:chocolate_glazed_berries",
+      "required": false
+    },
+    {
+      "id": "byg:blueberries",
+      "required": false
+    },
+    {
+      "id": "byg:blueberry_pie",
+      "required": false
+    },
+    {
+      "id": "byg:nightshade_berries",
+      "required": false
+    },
+    {
+      "id": "byg:nightshade_berry_pie",
+      "required": false
+    },
+    {
+      "id": "byg:crimson_berries",
+      "required": false
+    },
+    {
+      "id": "byg:crimson_berry_pie",
+      "required": false
+    },
+    {
+      "id": "twilightforest:torchberries",
+      "required": false
+    },
+
+  ]
+}

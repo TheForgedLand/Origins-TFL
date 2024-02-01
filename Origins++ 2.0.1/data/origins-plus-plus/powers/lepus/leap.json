@@ -10,8 +10,7 @@
 			},
 			{
 				"type":"origins:add_velocity",
-				"y":0.7,
-				"space":"local"
+				"y":0.7
 			},
 			{
 				"type":"origins:add_velocity",
@@ -27,17 +26,12 @@
 				"type":"origins:on_block"
 			},
 			{
-				"type":"origins:status_effect",
-				"effect":"minecraft:slow_falling",
-				"inverted":true
-			},
-			{
 				"type":"origins:swimming",
 				"inverted":true
 			}
 		]
 	},
-	"cooldown":200,
+	"cooldown":180,
 	"hud_render":{
 		"should_render":true,
 		"sprite_location":"origins:textures/gui/resource_bar.png",

@@ -31,10 +31,6 @@
                 {
                     "type": "origins:projectile",
                     "projectile": "minecraft:spectral_arrow"
-                },
-                {
-                    "type": "origins:projectile",
-                    "projectile": "minecraft:tipped_arrow"
                 }
             ]
         },

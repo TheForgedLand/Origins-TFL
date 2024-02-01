@@ -1,0 +1,46 @@
+# This is a basic workflow to help you get started with Actions
+name: Build Jars
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "1.19.2" branch
+  push:
+    branches:
+      - '1.19.2'
+    paths:
+      - '/src/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      sourcelist: ${{steps.list.outputs.paths}}
+    steps:
+      - name: Info
+        run: |
+         echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+         echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+         echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out Repository code
+        uses: actions/checkout@v4
+      - id: list
+        name: map source directory
+        run: echo paths=\'[$(ls -mQ src)]\' >> $GITHUB_OUTPUT
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        filename: ${{ fromJSON(needs.setup.outputs.sourcelist) }}
+    steps:
+      - name: upload build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{matrix.filename}}.jar
+          path: src/${{matrix.filename}}/**
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+

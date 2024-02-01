@@ -19,16 +19,16 @@
     "kitsune:zberry_no_hurt",
     "kitsune:armor",
     "kitsune:paws",
-	"kitsune:phase_fix",
+    "kitsune:phase_fix",
     "kitsune:paws_shield",
     "kitsune:hungy",
     "kitsune:fox_eyes",
     "kitsune:monch",
-	"kitsune:yum"
+    "kitsune:yum"
   ],
-	"icon": "minecraft:sweet_berries",
-	"order": 2,
-	"impact": 3,
-	"name": "Kitsune",
-	"description": "This race of Spirit Foxes dwell around settlements waiting for for treasure to be left unguarded. Though weak in terms of vitality they use their spiritual power to hide and strengthen their power."
+  "icon": "minecraft:sweet_berries",
+  "order": 2,
+  "impact": 3,
+  "name": "Kitsune",
+  "description": "This race of Spirit Foxes dwell around settlements waiting for for treasure to be left unguarded. Though weak in terms of vitality they use their spiritual power to hide and strengthen their power."
 }

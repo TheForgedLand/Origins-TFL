@@ -22,6 +22,7 @@ jobs:
     steps:
       - name: Info
         run: |
+          ls ${{github.workspace}}/src
          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
@@ -40,9 +41,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{matrix.filename}}.jar
-          path: src/${{matrix.filename}}/**
+          path: ${{github.workspace}}/src/${{matrix.filename}}/**
       - run: |
-          ls src
-          ls src/${{matrix.filename}}
+          ls ${{github.workspace}}/src/${{matrix.filename}}
           echo "🍏 This job's status is ${{ job.status }}."
 

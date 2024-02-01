@@ -29,13 +29,12 @@ jobs:
         uses: actions/checkout@v4
       - id: list
         name: map source directory
-        run: echo paths=\'[$(ls -mQ src)]\' >> $GITHUB_OUTPUT
+        run: echo paths={"filename":[$(ls -mQ src)]} >> $GITHUB_OUTPUT
   build:
     needs: setup
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        filename: ${{ fromJSON(needs.setup.outputs.sourcelist) }}
+      matrix: ${{ fromJSON(needs.setup.outputs.sourcelist) }}
     steps:
       - name: upload build Artifact
         uses: actions/upload-artifact@v4

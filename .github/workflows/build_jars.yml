@@ -20,14 +20,14 @@ jobs:
     outputs:
       sources: ${{steps.list.outputs.paths}}
     steps:
+      - name: Check out Repository code
+        uses: actions/checkout@v4
       - name: Info
         run: |
-          ls ${{github.workspace}}/src
+          ls ${{github.workspace}}
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
           echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out Repository code
-        uses: actions/checkout@v4
       - id: list
         name: map source directory
         run: echo paths={"filename":[$(ls -mQ src)]} >> $GITHUB_OUTPUT
@@ -37,6 +37,8 @@ jobs:
     strategy:
       matrix: ${{ fromJSON(needs.setup.outputs.sources) }}
     steps:
+      - name: Check out Repository code
+        uses: actions/checkout@v4
       - name: upload build Artifact
         uses: actions/upload-artifact@v4
         with:

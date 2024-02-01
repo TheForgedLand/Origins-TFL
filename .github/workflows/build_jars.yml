@@ -41,5 +41,8 @@ jobs:
         with:
           name: ${{matrix.filename}}.jar
           path: src/${{matrix.filename}}/**
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: |
+          ls src
+          ls src/${{matrix.filename}}
+          echo "🍏 This job's status is ${{ job.status }}."
 

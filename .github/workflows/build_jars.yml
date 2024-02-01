@@ -18,7 +18,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     outputs:
-      sourcelist: ${{steps.list.outputs.paths}}
+      sources: ${{steps.list.outputs.paths}}
     steps:
       - name: Info
         run: |
@@ -34,7 +34,7 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ fromJSON(needs.setup.outputs.sourcelist) }}
+      matrix: ${{ fromJSON(needs.setup.outputs.sources) }}
     steps:
       - name: upload build Artifact
         uses: actions/upload-artifact@v4
